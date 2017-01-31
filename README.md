@@ -1,4 +1,6 @@
 # vrapp-ionic
-Using the Ionic Framework and Google's VR View
+Using the Ionic Framework and videojs-panorama
 
-The video source file is absent from this repo (should be the www/ level)
+https://github.com/yanwsh/videojs-panorama
+
+https://github.com/driftyco/ionic
