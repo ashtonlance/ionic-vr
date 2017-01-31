@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="description" content="360 Video — A-Frame">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
@@ -17,10 +19,10 @@
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
+    <script src="js/lib/aframe.min.js"></script>
     <!-- your app's js -->
 
-    <script src="js/lib/three.min.js"></script>
+    <!-- <script src="js/lib/three.min.js"></script> -->
     <!-- <script src="js/lib/StereoEffect.js"></script>
     <script src="js/lib/DeviceOrientationControls.js"></script>
     <script src="js/lib/OrbitControls.js"></script>
@@ -34,19 +36,59 @@
     <ion-pane>
       <ion-header-bar class="bar-stable">
         <h1 class="title">Cardboard</h1>
-        <!-- <div class="buttons">
+        <div class="buttons">
           <button class="button button-clear" ng-click="openSettings()"><i class="icon ion-gear-a"></i></button>
-        </div> -->
+        </div>
       </ion-header-bar>
       <ion-content scroll="false" padding="false">
         <!-- <cardboard-gl></cardboard-gl> -->
-        <!-- <div id="vrview"></div> -->
-        <div id="controls">
-          <div id="toggleplay" class="paused"></div>
-          <div id="togglemute"></div>
-        </div>
-        <iframe allowfullscreen="true" scrolling="no" width="100%" height="100%" src="http://storage.googleapis.com/vrview/2.0/index.html?video=https://pointsmap.com/video.mp4&amp;is_stereo=true&amp;" style="border: 0px;"></iframe>
-</iframe>
+        <!-- <div id="vrview" webkit-playsinline></div> -->
+
+        <!-- <iframe webkit-playsinline allowfullscreen="true" scrolling="no" width="100%" height="400px" src="http://storage.googleapis.com/vrview/2.0/index.html?video=https://pointsmap.com/video.mp4&amp;is_stereo=true&amp;" style="border: 0px;">
+
+        </iframe> -->
+
+    <a-scene>
+      <a-assets>
+        <video id="video" src="https://www.pointsmap.com/video.mp4"
+                loop crossorigin webkit-playsinline></video>
+      </a-assets>
+
+      <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
+    </a-scene>
+    <!-- <button id="play-button">Play</button> -->
+<!--
+<a-scene id="vr-scene">
+  <a-camera
+    id="camera"
+    position="0 1.8 4"
+    cursor-visible="true"
+    cursor-scale="2"
+    cursor-color="#000000"
+    cursor-offset="2"
+    cursor-maxdistance="100"
+    cursor-opacity="0.7"></a-camera>
+
+  <a-assets>
+    <video id="vid" src="https://www.pointsmap.com/video.mp4"
+    crossOrigin="anonymous"
+    autoplay="false"
+    loop="true"
+    webkit-playsinline>
+
+    </video>
+  </a-assets>
+
+  <a-entity geometry="primitive: sphere;
+                      radius: 5000;
+                      segmentsWidth: 64;
+                      segmentsHeight: 64;"
+            material="shader: flat; src: #vid;"
+            scale="-1 1 1">
+  </a-entity>
+
+</a-scene> -->
+
       </ion-content>
     </ion-pane>
 
