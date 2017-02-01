@@ -85,25 +85,26 @@ angular.module('starter', ['ionic'])
         type: 'video/mp4'
       }],
       poster: ''
-    }, {
-      sources: [{
-        src: 'videos/video.mp4',
-        type: 'video/mp4'
-      }],
-      poster: ''
-    }, {
+      }, {
+        sources: [{
+          src: 'videos/video.mp4',
+          type: 'video/mp4'
+        }],
+        poster: ''
+      }, {
 
-    }]);
-
-// Play through the playlist automatically.
-  player.playlist.autoadvance(5);
+      }]);
+//
+// // Play through the playlist automatically.
+    player.playlist.autoadvance(5);
 
       player.panorama({
           clickToToggle: (!isMobile()),
           autoMobileOrientation: true,
           scrollable: true,
           initFov: 100,
-          initLat: -10,
+          initLat: -5,
+          initLon: 90,
           NoticeMessage: (isMobile()) ? "" : "",
           callback: function() {
               if (!isMobile()) player.play();
