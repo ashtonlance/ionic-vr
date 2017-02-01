@@ -81,13 +81,13 @@ angular.module('starter', ['ionic'])
       player.width(width), player.height(height);
       player.playlist([{
       sources: [{
-        src: 'video.mp4',
+        src: 'videos/video.mp4',
         type: 'video/mp4'
       }],
       poster: ''
     }, {
       sources: [{
-        src: 'video2.mp4',
+        src: 'videos/video.mp4',
         type: 'video/mp4'
       }],
       poster: ''
