@@ -19,7 +19,7 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="AllowInlineMediaPlayback" value="true"/>
-  <!-- <preference name="orientation" value="landscape" /> -->
+  <preference name="orientation" value="landscape"/>
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>

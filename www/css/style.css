@@ -23,3 +23,22 @@ body.vjs-full-window .player_wrapper {
     top: 0;
     left: 0;
 }
+
+
+
+.bar-header {
+   height: 35px; /*just an example*/
+}
+
+.bar-header .title {
+   line-height: 35px;
+   font-size: 1em;
+}
+
+.has-header {
+   top: 35px;
+}
+
+.icon .ion-navicon::before {
+  font-size: 15px;
+}

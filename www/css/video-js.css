@@ -41,6 +41,7 @@
 
 .vjs-icon-volume-mute, .video-js .vjs-mute-control.vjs-vol-0,
 .video-js .vjs-volume-menu-button.vjs-vol-0 {
+  display: none;
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
@@ -50,6 +51,7 @@
 
 .vjs-icon-volume-low, .video-js .vjs-mute-control.vjs-vol-1,
 .video-js .vjs-volume-menu-button.vjs-vol-1 {
+    display: none;
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
@@ -59,6 +61,7 @@
 
 .vjs-icon-volume-mid, .video-js .vjs-mute-control.vjs-vol-2,
 .video-js .vjs-volume-menu-button.vjs-vol-2 {
+    display: none;
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
@@ -68,6 +71,7 @@
 
 .vjs-icon-volume-high, .video-js .vjs-mute-control,
 .video-js .vjs-volume-menu-button {
+    display: none;
   font-family: VideoJS;
   font-weight: normal;
   font-style: normal; }
@@ -351,8 +355,8 @@ body.vjs-full-window {
   width: 3em;
   display: block;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 44%;
+  left: 44%;
   padding: 0;
   cursor: pointer;
   opacity: 1;
@@ -544,7 +548,7 @@ body.vjs-full-window {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3.0em;
+  height: 4.0em;
   background-color: #2B333F;
   background-color: rgba(43, 51, 63, 0.7); }
 
@@ -598,7 +602,7 @@ body.vjs-full-window {
   -ms-flex: none;
   flex: none; }
   .video-js .vjs-control:before {
-    font-size: 1.8em;
+    font-size: 2.55em;
     line-height: 1.67; }
 
 .video-js .vjs-control:focus:before,
@@ -776,6 +780,7 @@ body.vjs-full-window {
   flex: none; }
 
 .video-js .vjs-volume-control {
+  display: none;
   width: 5em;
   -webkit-box-flex: none;
   -moz-box-flex: none;
@@ -792,6 +797,7 @@ body.vjs-full-window {
   align-items: center; }
 
 .video-js .vjs-volume-bar {
+  display: none;
   margin: 1.35em 0.45em; }
 
 .vjs-volume-bar.vjs-slider-horizontal {
@@ -831,7 +837,7 @@ body.vjs-full-window {
   width: 100%; }
 
 .vjs-menu-button-popup.vjs-volume-menu-button .vjs-menu {
-  display: block;
+  display: none;
   width: 0;
   height: 0;
   border-top-color: transparent; }
@@ -931,7 +937,8 @@ body.vjs-full-window {
   -ms-flex: none;
   flex: none;
   font-size: 1em;
-  line-height: 3em;
+  line-height: 4em;
+  font-size: 1.1em;
   min-width: 2em;
   width: auto;
   padding-left: 1em;
@@ -956,6 +963,7 @@ body.vjs-full-window {
   display: none; }
 
 .video-js .vjs-play-control {
+
   cursor: pointer;
   -webkit-box-flex: none;
   -moz-box-flex: none;
@@ -1005,6 +1013,7 @@ video::-webkit-media-text-track-display {
   transform: translateY(-1.5em); }
 
 .video-js .vjs-fullscreen-control {
+  display: none;
   cursor: pointer;
   -webkit-box-flex: none;
   -moz-box-flex: none;
