@@ -29,9 +29,6 @@ angular.module('starter', ['ionic'])
 .controller('AppCtrl', ['$scope', '$ionicModal', function($scope, $ionicModal) {
 
 
-  $scope.choice = 'video.mp4';
-  console.log($scope.choice);
-
   $scope.setVideoA = function () {
     $scope.choice = 'video.mp4';
     console.log($scope.choice);
@@ -69,6 +66,7 @@ angular.module('starter', ['ionic'])
       return check;
   }
   (function(window, videojs) {
+
       var player = window.player = videojs('videojs-panorama-player', {}, function() {
           window.addEventListener("resize", function() {
               var canvas = player.getChild('Canvas');
@@ -101,15 +99,25 @@ angular.module('starter', ['ionic'])
       player.panorama({
           clickToToggle: (!isMobile()),
           autoMobileOrientation: true,
-          scrollable: true,
           initFov: 100,
-          initLat: -5,
-          initLon: 90,
-          NoticeMessage: (isMobile()) ? "" : "",
+          initLat: 0,
+          initLon: -180,
+          NoticeMessage: (isMobile())? "" : "",
           callback: function() {
               if (!isMobile()) player.play();
           }
       });
+
+      player.on("play", function(){
+            var vrbtn = player.controlBar.getChild("VRButton");
+            vrbtn.handleClick();
+      });
+
+      player.on("playlistchange", function(){
+            var vrbtn = player.controlBar.getChild("VRButton");
+            vrbtn.handleClick();
+      });
+
       window.addEventListener("message", function(event) {
           if (typeof event.data === "object") {
               if (event.data.type === "device-motion") {

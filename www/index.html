@@ -18,13 +18,14 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
-    <script src="js/app.js"></script>
+    <!-- <script src="js/app.js"></script> -->
 
     <!-- video.js 5 -->
-    <script src="js/lib/video.js"></script>
-    <script src="js/lib/videojs-playlist.js"></script>
-    <script src="js/lib/three.js"></script>
-    <script src="js/lib/videojs-panorama.v5.min.js"></script>
+    <!-- <script src="js/lib/video.js"></script> -->
+    <!-- <script src="js/lib/videojs-playlist.js"></script> -->
+    <!-- <script src="js/lib/three.js"></script> -->
+    <!-- <script src="js/lib/videojs-panorama.v5.min.js"></script> -->
+    <script src="dist/bundle.js"></script>
 
 
 </head>
@@ -34,14 +35,14 @@
         <ion-header-bar class="bar-dark">
             <h1 class="title">Video Ideas VR Viewer</h1>
             <div class="buttons">
-                <button class="button button-clear" ng-click="openSettings()"><i style="font-size: 29px; margin-top: -5px;" class="icon ion-navicon"></i></button>
+                <!-- <button class="button button-clear" ng-click="openSettings()"><i style="font-size: 29px; margin-top: -5px;" class="icon ion-navicon"></i>
+                </button> -->
             </div>
         </ion-header-bar>
         <ion-content scroll="false" padding="false">
-            <video id="videojs-panorama-player" class="video-js vjs-default-skin vjs-big-play-centered" poster="" crossorigin="anonymous" controls>
+            <video id="videojs-panorama-player" class="video-js vjs-default-skin vjs-playing" preload poster="" crossorigin="anonymous" controls>
               <source src="videos/video.mp4" type='video/mp4'>
             </video>
-
         </ion-content>
     </ion-pane>
 
@@ -55,9 +56,6 @@
                 </div>
             </ion-header-bar>
             <ion-content>
-                <!-- <form>
-                    <ion-toggle ng-model="data.enableAwesome" toggle-class="toggle-assertive">Enable Awesome?</ion-toggle>
-                </form> -->
                 <ion-list>
                 <ion-radio ng-model="choice" ng-value="'A'" ng-click="setVideoA()">Video A</ion-radio>
                 <ion-radio ng-model="choice" ng-value="'B'" ng-click="setVideoB()">Video B</ion-radio>
@@ -70,3 +68,4 @@
 </body>
 
 </html>
+<!--  -->

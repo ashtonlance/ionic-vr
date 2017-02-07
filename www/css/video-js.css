@@ -797,7 +797,7 @@ body.vjs-full-window {
   align-items: center; }
 
 .video-js .vjs-volume-bar {
-  display: none;
+  display: flex;
   margin: 1.35em 0.45em; }
 
 .vjs-volume-bar.vjs-slider-horizontal {
