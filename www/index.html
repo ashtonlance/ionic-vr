@@ -25,7 +25,6 @@
     <script src="js/lib/videojs-playlist.js"></script>
     <script src="js/lib/three.js"></script>
     <script src="js/lib/videojs-panorama.v5.min.js"></script>
-    <!-- <script src="js/lib/Youtube.min.js"></script> -->
 
 
 </head>
@@ -33,7 +32,7 @@
 <body ng-app="starter" ng-controller="AppCtrl as app">
     <ion-pane>
         <ion-header-bar class="bar-dark">
-            <h1 class="title">PointsMap 360 Video Viewer</h1>
+            <h1 class="title">Video Ideas VR Viewer</h1>
             <div class="buttons">
                 <button class="button button-clear" ng-click="openSettings()"><i style="font-size: 29px; margin-top: -5px;" class="icon ion-navicon"></i></button>
             </div>
@@ -42,15 +41,6 @@
             <video id="videojs-panorama-player" class="video-js vjs-default-skin vjs-big-play-centered" poster="" crossorigin="anonymous" controls>
               <source src="videos/video.mp4" type='video/mp4'>
             </video>
-            <!-- <video
-            id="videojs-panorama-player"
-            class="video-js vjs-default-skin"
-            controls
-            autoplay
-            width="640" height="264"
-            data-setup='{ "techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}] }'
-          >
-          </video> -->
 
         </ion-content>
     </ion-pane>
