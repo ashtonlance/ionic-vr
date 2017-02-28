@@ -1,11 +1,7 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
-.run(function($ionicPlatform) {
+
+.run(function($ionicPlatform, $state) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs).
@@ -26,32 +22,48 @@ angular.module('starter', ['ionic'])
   });
 })
 
-.controller('AppCtrl', ['$scope', '$ionicModal', function($scope, $ionicModal) {
 
-
-  $scope.setVideoA = function () {
-    $scope.choice = 'video.mp4';
-    console.log($scope.choice);
-  };
-
-  $scope.setVideoB = function () {
-    $scope.choice = 'video2.mp4';
-    console.log($scope.choice);
-  };
-
-  $ionicModal.fromTemplateUrl('settings.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
+.config(function($stateProvider, $urlRouterProvider) {
+  $stateProvider
+  .state('home', {
+    url: '/',
+    templateUrl: 'home.html',
+    controller: 'homeCtrl'
+  })
+  .state('video1', {
+    url: '/video1',
+    templateUrl: 'video1.html',
+    controller: 'appCtrl'
+  })
+  .state('video2', {
+    url: '/video2',
+    templateUrl: 'video2.html',
+    controller: 'appCtrl'
+  })
+  .state('video3', {
+    url: '/video3',
+    templateUrl: 'video3.html',
+    controller: 'appCtrl'
+  })
+  .state('video4', {
+    url: '/video4',
+    templateUrl: 'video4.html',
+    controller: 'appCtrl'
   });
+  $urlRouterProvider.otherwise("/");
+})
 
-  $scope.openSettings = function() {
-    $scope.modal.show();
-  };
+.controller('homeCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+  
 
-  $scope.closeSettings = function() {
-    $scope.modal.hide();
+}])
+
+.controller('appCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+  $scope.myGoBack = function() {
+    // $ionicHistory.goBack();
+    var oldPlayer = document.getElementById('videojs-panorama-player');
+    videojs(oldPlayer).dispose();
+    window.history.back();
   };
 
   function isMobile() {
@@ -100,22 +112,9 @@ angular.module('starter', ['ionic'])
           clickToToggle: (!isMobile()),
           autoMobileOrientation: true,
           initFov: 100,
-          initLat: 0,
+          initLat: -5,
           initLon: -180,
           NoticeMessage: (isMobile())? "" : "",
-          callback: function() {
-              if (!isMobile()) player.play();
-          }
-      });
-
-      player.on("play", function(){
-            var vrbtn = player.controlBar.getChild("VRButton");
-            vrbtn.handleClick();
-      });
-
-      player.on("playlistchange", function(){
-            var vrbtn = player.controlBar.getChild("VRButton");
-            vrbtn.handleClick();
       });
 
       window.addEventListener("message", function(event) {
