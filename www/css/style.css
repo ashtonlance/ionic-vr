@@ -1,11 +1,15 @@
+html {
+  touch-action: manipulation;
+}
+
 body {
     margin: 0;
     height: 100%;
 }
 
-.scroll {
-  background-image: url('../img/home-banner.jpg');
-  background-size: cover;
+#homebackground {
+    background-image: url('../img/home-banner.jpg');
+    background-size: cover;
 }
 
 body.vjs-full-window .player_wrapper {
@@ -31,27 +35,47 @@ body.vjs-full-window .player_wrapper {
 }
 
 .icon .ion-navicon::before {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .card img {
-  width: 95% !important;
-  margin-left: 2.5%;
-  margin-top: 5px;
-  border-radius: 4px;
+    width: 95% !important;
+    margin-left: 2.5%;
+    margin-top: 5px;
+    border-radius: 4px;
 }
 
 .card p {
-  text-align: center;
-  margin-bottom: 1px;
+    text-align: center;
+    margin-bottom: 1px;
 }
 
-
-.row + .row {
+.row+.row {
     margin-top: -35px;
     padding-top: 0;
 }
 
 .row {
-  margin-top: -15px;
+    margin-top: 0px;
+}
+
+.bar-header {
+    height: 35px;
+}
+
+/*To vertically align the title of your page also add this:*/
+
+.bar-header .title {
+    line-height: 35px;
+}
+
+.bar-header .button-clear {
+    line-height: 25px;
+    min-height: 25px;
+}
+
+/*And finally to adjust the content of the page:*/
+
+.has-header {
+    top: 35px;
 }
