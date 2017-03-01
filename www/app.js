@@ -82,7 +82,9 @@ angular.module('starter', ['ionic'])
                     var canvas = player.getChild('Canvas');
                     if (canvas) canvas.handleResize();
                 });
+
             });
+            // console.log(player);
             var videoElement = document.getElementById("videojs-panorama-player");
             var width = videoElement.offsetWidth;
             var height = videoElement.offsetHeight;
@@ -112,6 +114,7 @@ angular.module('starter', ['ionic'])
                 initLat: -5,
                 initLon: -180,
                 showNotice: false,
+
             });
 
             window.addEventListener("message", function(event) {

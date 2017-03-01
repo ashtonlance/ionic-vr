@@ -79,3 +79,40 @@ body.vjs-full-window .player_wrapper {
 .has-header {
     top: 35px;
 }
+
+.video-js .vjs-big-play-button {
+    font-size: 3em;
+    line-height: 1.5em;
+    height: 1.5em;
+    width: 2.55em;
+    display: block;
+    position: absolute;
+    top: 42%;
+    left: 44%;
+    padding: 0;
+    cursor: pointer;
+    opacity: 1;
+    border: none;
+    background-color: #2B333F;
+    /* background-color: rgba(43, 51, 63, 0.7); */
+    -webkit-border-radius: 0.3em;
+    -moz-border-radius: 0.3em;
+    border-radius: 0.3em;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#helpbutton {
+  position: absolute; bottom: -7px; left: 5px; color: white; font-size: 30px;
+}
+
+@media only screen and (max-device-width: 568px) {
+  #helpbutton {
+    font-size: 20px;
+    bottom: -11px;
+  }
+
+
+}
