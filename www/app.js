@@ -90,22 +90,22 @@ angular.module('starter', ['ionic'])
             var height = videoElement.offsetHeight;
             player.width(width), player.height(height);
 
-            player.playlist([{
-                sources: [{
-                    src: 'videos/video.mp4',
-                    type: 'video/mp4'
-                }],
-                poster: ''
-            }, {
-                sources: [{
-                    src: 'videos/video.mp4',
-                    type: 'video/mp4'
-                }],
-                poster: ''
-            }, {
-
-            }]);
-            player.playlist.autoadvance(2.5);
+            // player.playlist([{
+            //     sources: [{
+            //         src: 'videos/video.mp4',
+            //         type: 'video/mp4'
+            //     }],
+            //     poster: ''
+            // }, {
+            //     sources: [{
+            //         src: 'videos/video.mp4',
+            //         type: 'video/mp4'
+            //     }],
+            //     poster: ''
+            // }, {
+            //
+            // }]);
+            // player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
