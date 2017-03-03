@@ -8,7 +8,7 @@ body {
 }
 
 #homebackground {
-    background-image: url('../img/home-banner.jpg');
+    /*background-image: url('../img/home-banner.jpg');*/
     background-size: cover;
 }
 

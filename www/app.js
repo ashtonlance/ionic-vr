@@ -18,13 +18,13 @@ angular.module('starter', ['ionic'])
 
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
-            .state('splash', {
-                url: '/',
-                templateUrl: 'splash.html',
-                controller: 'homeCtrl'
-            })
+            // .state('splash', {
+            //     url: '/',
+            //     templateUrl: 'splash.html',
+            //     controller: 'homeCtrl'
+            // })
             .state('home', {
-                url: '/home',
+                url: '/',
                 templateUrl: 'home.html',
                 controller: 'homeCtrl'
             })
