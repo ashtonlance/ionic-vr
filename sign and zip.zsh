@@ -1,0 +1,1 @@
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore vrapp.keystore android-release-unsigned.apk vrapp && zipalign -v 4 android-release-unsigned.apk hawker360vr.apk
