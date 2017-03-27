@@ -47,6 +47,11 @@ angular.module('starter', ['ionic'])
                 url: '/video4',
                 templateUrl: 'video4.html',
                 controller: 'appCtrl'
+            })
+            .state('video5', {
+                url: '/video5',
+                templateUrl: 'video5.html',
+                controller: 'appCtrl'
             });
         $urlRouterProvider.otherwise("/");
     })
