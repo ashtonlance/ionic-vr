@@ -36,7 +36,7 @@ angular.module('starter', ['ionic'])
             .state('video2', {
                 url: '/video2',
                 templateUrl: 'video2.html',
-                controller: 'appCtrl'
+                controller: 'flatVideoCtrl'
             })
             .state('video3', {
                 url: '/video3',
@@ -57,6 +57,23 @@ angular.module('starter', ['ionic'])
     })
 
     .controller('homeCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+
+      $scope.myGoBack = function() {
+          var oldPlayer = document.getElementById('videojs-panorama-player');
+          videojs(oldPlayer).dispose();
+          window.history.back();
+      };
+
+
+    }])
+
+    .controller('flatVideoCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+
+      $scope.myGoBack = function() {
+          var oldPlayer = document.getElementById('videojs-panorama-player');
+          videojs(oldPlayer).dispose();
+          window.history.back();
+      };
 
 
     }])
@@ -89,7 +106,7 @@ angular.module('starter', ['ionic'])
                 });
 
             });
-            // console.log(player);
+
             var videoElement = document.getElementById("videojs-panorama-player");
             var width = videoElement.offsetWidth;
             var height = videoElement.offsetHeight;
