@@ -53,6 +53,7 @@ body.vjs-full-window .player_wrapper {
 .card {
   background-color: rgba(100, 100, 100, 0.1);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  margin: 15px 0 0 0;
 }
 
 .card p {
@@ -131,6 +132,7 @@ body.vjs-full-window .player_wrapper {
   background-color: rgba(0, 0, 0, 0.2);
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .top-banner p {
@@ -139,6 +141,53 @@ body.vjs-full-window .player_wrapper {
   margin: 0 auto;
   margin-top: 10px;
 }
+
+#section05 a {
+	padding-top: 70px;
+}
+#section05 a span {
+	position: absolute;
+	bottom: 62%;
+	left: 10%;
+	width: 24px;
+	height: 24px;
+	margin-left: -12px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	-webkit-animation: sdb05 1.5s infinite;
+	animation: sdb05 1.5s infinite;
+	box-sizing: border-box;
+}
+@-webkit-keyframes sdb05 {
+	0% {
+		-webkit-transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+@keyframes sdb05 {
+	0% {
+		transform: rotate(-45deg) translate(0, 0);
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(-45deg) translate(-20px, 20px);
+		opacity: 0;
+	}
+}
+
+
 
 @media only screen and (max-device-width: 568px) {
   #helpbutton {

@@ -56,7 +56,7 @@ angular.module('starter', ['ionic'])
         $urlRouterProvider.otherwise("/");
     })
 
-    .controller('homeCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', '$http', function($scope, $state, $ionicModal, $ionicHistory, $http) {
+    .controller('homeCtrl', ['$scope', '$rootScope', '$state', '$ionicModal', '$ionicHistory', '$http', function($scope, $rootScope, $state, $ionicModal, $ionicHistory, $http) {
 
       $scope.myGoBack = function() {
           var oldPlayer = document.getElementById('videojs-panorama-player');
@@ -66,12 +66,20 @@ angular.module('starter', ['ionic'])
 
       $http.get('http://videoideas.com/videos/videos.json')
             .then(function success(response) {
-                $scope.videos = response.data;
-                console.log($scope.videos.files.mp4);
+                $rootScope.videos = response.data;
+                $rootScope.videos = $rootScope.videos.files.mp4
+                console.log($rootScope.videos);
 
-              })
+              });
+
+      $scope.openVideo = function(source) {
+        $rootScope.videoSource = source;
+        console.log($rootScope.videoSource);
+        $state.go('video1')
+      }
 
     }])
+
 
     .controller('flatVideoCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
 
@@ -84,13 +92,15 @@ angular.module('starter', ['ionic'])
 
     }])
 
-    .controller('appCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+    .controller('appCtrl', ['$scope', '$rootScope', '$state', '$ionicModal', '$ionicHistory', function($scope, $rootScope, $state, $ionicModal, $ionicHistory) {
 
         $scope.myGoBack = function() {
             var oldPlayer = document.getElementById('videojs-panorama-player');
             videojs(oldPlayer).dispose();
             window.history.back();
         };
+
+        console.log($rootScope.videoSource);
 
         function isMobile() {
             var check = false;
@@ -118,22 +128,16 @@ angular.module('starter', ['ionic'])
             var height = videoElement.offsetHeight;
             player.width(width), player.height(height);
 
-            // player.playlist([{
-            //     sources: [{
-            //         src: 'videos/video.mp4',
-            //         type: 'video/mp4'
-            //     }],
-            //     poster: ''
-            // }, {
-            //     sources: [{
-            //         src: 'videos/video.mp4',
-            //         type: 'video/mp4'
-            //     }],
-            //     poster: ''
-            // }, {
-            //
-            // }]);
-            // player.playlist.autoadvance(2.5);
+            player.playlist([{
+                sources: [{
+                    src: $rootScope.videoSource,
+                    type: 'video/mp4'
+                }],
+                poster: ''
+            },
+
+            ]);
+            player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
@@ -144,6 +148,8 @@ angular.module('starter', ['ionic'])
                 showNotice: false,
 
             });
+
+            console.log(player.cache_.src);
 
             window.addEventListener("message", function(event) {
                 if (typeof event.data === "object") {

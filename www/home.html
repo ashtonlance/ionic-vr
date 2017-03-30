@@ -9,22 +9,21 @@
 
         </div>
         <div class="row">
-          <div class="col col-50">
+          <div class="col col-50 col-offset-25">
               <div class="card">
                   <a class="" ng-href="#/video2"><img src="img/thumbnaildemo.png"></a>
-                  <p>Behind the Scenes & Demo</p>
+                  <p>Behind the Scenes & Demo (non-VR)</p>
               </div>
           </div>
             <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video1" ><img src="img/thumbnailhawerknoplay.png"></a>
-                    <p>Hawker 360</p>
-                </div>
+              <section id="section05" class="demo">
+                <a><span></span></a>
+                </section>
 
             </div>
 
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col col-50">
                 <div class="card">
                     <a class="" ng-href="#/video3"><img src="img/thumbnailpoolnoplay.png"></a>
@@ -38,6 +37,17 @@
                     <p>Card Monroe 360</p>
                 </div>
             </div>
+        </div> -->
+        <div >
+          <div class="row" style="flex-wrap: wrap">
+            <div ng-repeat="video in videos" class="col col-50">
+                <div  class="card" >
+                    <a ng-click="openVideo(video.source);">
+                      <img ng-src="{{video.thumbnail}}">
+                      <p>{{video.label}}</p>
+                    </a>
+                </div>
+          </div>
         </div>
         <!-- <div class="row"> -->
             <!-- <div class="col-50" style="margin: 0 auto;">
