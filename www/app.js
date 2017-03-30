@@ -56,7 +56,7 @@ angular.module('starter', ['ionic'])
         $urlRouterProvider.otherwise("/");
     })
 
-    .controller('homeCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', function($scope, $state, $ionicModal, $ionicHistory) {
+    .controller('homeCtrl', ['$scope', '$state', '$ionicModal', '$ionicHistory', '$http', function($scope, $state, $ionicModal, $ionicHistory, $http) {
 
       $scope.myGoBack = function() {
           var oldPlayer = document.getElementById('videojs-panorama-player');
@@ -64,6 +64,12 @@ angular.module('starter', ['ionic'])
           window.history.back();
       };
 
+      $http.get('http://videoideas.com/videos/videos.json')
+            .then(function success(response) {
+                $scope.videos = response.data;
+                console.log($scope.videos.files.mp4);
+
+              })
 
     }])
 
