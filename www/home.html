@@ -23,22 +23,29 @@
             </div>
 
         </div>
-        <!-- <div class="row">
+        <div class="row no-margintop">
             <div class="col col-50">
                 <div class="card">
-                    <a class="" ng-href="#/video3"><img src="img/thumbnailpoolnoplay.png"></a>
-                    <p>Pool Game</p>
+                    <a class="" ng-href="#/video3"><img src="img/thumbnailmontagenoplay.png"></a>
+                    <p>VIP VR360 Montage (Local)</p>
                 </div>
             </div>
 
             <div class="col col-50">
                 <div class="card">
                     <a class="" ng-href="#/video4"><img src="img/thumbnailcardmonroenoplay.png"></a>
-                    <p>Card Monroe 360</p>
+                    <p>Card Monroe 360 (Local)</p>
                 </div>
             </div>
-        </div> -->
-        <div >
+        </div>
+        <div class="row no-margintop">
+          <div class="col">
+          <div class="line-separator"></div>
+          <p style="color:white;text-align:center;margin-top:10px;margin-bottom:0;">Streaming Videos</p>
+          <p style="color:white;text-align:center;margin-bottom:0;">Choose Full Quality or Reduced Quality based on your Internet connection speed</p>
+          </div>
+        </div>
+        <div>
           <div class="row" style="flex-wrap: wrap">
             <div ng-repeat="video in videos" class="col col-50">
                 <div  class="card" >
@@ -49,7 +56,14 @@
                 </div>
           </div>
         </div>
-        <!-- <div class="row"> -->
+
+        <div class="row">
+          <div style="margin-top:30px;" class="col card">
+          <a class="button button-block" ng-click="checkConnection()">Check Connection
+            </a>
+            <p id="progress">Click the button above to run the test</p>
+            </div>
+        </div>
             <!-- <div class="col-50" style="margin: 0 auto;">
                 <div class="card">
                     <a class="" ng-href="#/video5"><img src="img/thumbnail4.png"></a>
