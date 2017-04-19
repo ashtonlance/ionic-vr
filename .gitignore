@@ -8,3 +8,5 @@ bower_components/
 videos/
 video.mp4
 video2.mp4
+/.vscode
+/typings

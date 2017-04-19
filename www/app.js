@@ -8,10 +8,10 @@ angular.module('starter', ['ionic'])
                 cordova.plugins.Keyboard.disableScroll(true);
             }
 
-            // ionic.Platform.fullScreen();
-            if (window.StatusBar) {
-                return StatusBar.styleBlackTranslucent();
-            }
+            ionic.Platform.fullScreen();
+            // if (window.StatusBar) {
+            //     return StatusBar.styleBlackTranslucent();
+            // }
 
         });
     })
@@ -51,7 +51,12 @@ angular.module('starter', ['ionic'])
             .state('video5', {
                 url: '/video5',
                 templateUrl: 'video5.html',
-                controller: 'appCtrl'
+                controller: 'appCtrl2'
+            })
+            .state('video6', {
+                url: '/video6',
+                templateUrl: 'video6.html',
+                controller: 'appCtrl2'
             });
         $urlRouterProvider.otherwise("/");
     })
