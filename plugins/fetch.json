@@ -10,7 +10,7 @@
     "cordova-plugin-statusbar": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-statusbar@2.2.1"
+            "id": "cordova-plugin-statusbar@2.2.2"
         },
         "is_top_level": true,
         "variables": {}
@@ -53,6 +53,14 @@
             "url": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
             "subdir": ".",
             "ref": "0.6.5"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-network-information": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-network-information"
         },
         "is_top_level": true,
         "variables": {}
