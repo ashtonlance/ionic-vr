@@ -48,12 +48,12 @@ body.vjs-full-window .player_wrapper {
     margin-top: 5px;
     border-radius: 4px;
     max-height: 145px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    /*box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);*/
 }
 
 .card {
     background-color: rgba(100, 100, 100, 0.1);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
     margin: 15px 0 0 0;
 }
 
@@ -74,11 +74,7 @@ body.vjs-full-window .player_wrapper {
 
 .bar-header {
     height: 35px;
-    /*background-color: rgba(0, 0, 0, 0.5);*/
 }
-
-
-/*To vertically align the title of your page also add this:*/
 
 .bar-header .title {
     line-height: 35px;
@@ -88,9 +84,6 @@ body.vjs-full-window .player_wrapper {
     line-height: 25px;
     min-height: 25px;
 }
-
-
-/*And finally to adjust the content of the page:*/
 
 .has-header {
     top: 35px;
@@ -138,7 +131,7 @@ body.vjs-full-window .player_wrapper {
 
 .top-banner {
     background-color: rgba(0, 0, 0, 0.2);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
     padding: 10px;
     margin-bottom: 10px;
 }
@@ -149,54 +142,6 @@ body.vjs-full-window .player_wrapper {
     margin-top: 10px;
 }
 
-#section05 a {
-    padding-top: 70px;
-}
-
-#section05 a span {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-    width: 24px;
-    height: 24px;
-    margin-left: -12px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    -webkit-animation: sdb05 1.5s infinite;
-    animation: sdb05 1.5s infinite;
-    box-sizing: border-box;
-}
-
-@-webkit-keyframes sdb05 {
-    0% {
-        -webkit-transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
-}
-
-@keyframes sdb05 {
-    0% {
-        transform: rotate(-45deg) translate(0, 0);
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: rotate(-45deg) translate(-20px, 20px);
-        opacity: 0;
-    }
-}
-
 .no-margintop {
     margin-top: 10px !important;
 }
@@ -205,6 +150,18 @@ body.vjs-full-window .player_wrapper {
     height: 1px;
     background: #717171;
     border-bottom: 1px solid #313030;
+}
+
+#videojs-panorama-player>div.vjs-control-bar>button.vjs-fullscreen-control.vjs-control.vjs-button {
+    display: none;
+}
+
+#videojs-panorama-player>div.vjs-control-bar>div.vjs-volume-panel.vjs-control.vjs-volume-panel-horizontal {
+    display: none;
+}
+
+#videojs-panorama-player>div.vjs-control-bar>button.vjs-VR-control.vjs-control.vjs-button {
+    font-size: 20px;
 }
 
 @media only screen and (max-device-width: 568px) {
