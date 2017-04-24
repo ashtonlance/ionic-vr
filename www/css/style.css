@@ -9,7 +9,8 @@ body {
 }
 
 #homebackground {
-    background-image: url('../img/background.png');
+    /*background-image: url('../img/background.png');*/
+    background: linear-gradient(to bottom, #8e0e00, #190A05);
     background-size: cover;
     filter: brightness(1.25);
     /*background-color: #000;*/
