@@ -62,68 +62,68 @@ angular.module('starter', ['ionic'])
 
 
         //JUST AN EXAMPLE, PLEASE USE YOUR OWN PICTURE!
-        var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg";
-        var downloadSize = 4995374; //bytes
+        // var imageAddr = "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg";
+        // var downloadSize = 4995374; //bytes
 
-        function ShowProgressMessage(msg) {
-            if (console) {
-                if (typeof msg == "string") {
-                    console.log(msg);
-                } else {
-                    for (var i = 0; i < msg.length; i++) {
-                        console.log(msg[i]);
-                    }
-                }
-            }
+        // function ShowProgressMessage(msg) {
+        //     if (console) {
+        //         if (typeof msg == "string") {
+        //             console.log(msg);
+        //         } else {
+        //             for (var i = 0; i < msg.length; i++) {
+        //                 console.log(msg[i]);
+        //             }
+        //         }
+        //     }
 
-            var oProgress = document.getElementById("progress");
-            if (oProgress) {
-                var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
-                oProgress.innerHTML = actualHTML;
-            }
-        }
+        //     var oProgress = document.getElementById("progress");
+        //     if (oProgress) {
+        //         var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
+        //         oProgress.innerHTML = actualHTML;
+        //     }
+        // }
 
-        $scope.checkConnection = function () {
-            ShowProgressMessage("Loading the image, please wait...");
-            window.setTimeout(MeasureConnectionSpeed, 1);
-        };
+        // $scope.checkConnection = function () {
+        //     ShowProgressMessage("Loading the image, please wait...");
+        //     window.setTimeout(MeasureConnectionSpeed, 1);
+        // };
 
-        if (window.addEventListener) {
-            window.addEventListener('load', $scope.checkConnection, false);
-        } else if (window.attachEvent) {
-            window.attachEvent('onload', $scope.checkConnection);
-        }
+        // if (window.addEventListener) {
+        //     window.addEventListener('load', $scope.checkConnection, false);
+        // } else if (window.attachEvent) {
+        //     window.attachEvent('onload', $scope.checkConnection);
+        // }
 
-        function MeasureConnectionSpeed() {
-            var startTime, endTime;
-            var download = new Image();
-            download.onload = function () {
-                endTime = (new Date()).getTime();
-                showResults();
-            }
+        // function MeasureConnectionSpeed() {
+        //     var startTime, endTime;
+        //     var download = new Image();
+        //     download.onload = function () {
+        //         endTime = (new Date()).getTime();
+        //         showResults();
+        //     }
 
-            download.onerror = function (err, msg) {
-                ShowProgressMessage("Invalid image, or error downloading");
-            }
+        //     download.onerror = function (err, msg) {
+        //         ShowProgressMessage("Invalid image, or error downloading");
+        //     }
 
-            startTime = (new Date()).getTime();
-            var cacheBuster = "?nnn=" + startTime;
-            download.src = imageAddr + cacheBuster;
+        //     startTime = (new Date()).getTime();
+        //     var cacheBuster = "?nnn=" + startTime;
+        //     download.src = imageAddr + cacheBuster;
 
-            function showResults() {
-                var duration = (endTime - startTime) / 1000;
-                var bitsLoaded = downloadSize * 8;
-                var speedBps = (bitsLoaded / duration).toFixed(2);
-                var speedKbps = (speedBps / 1024).toFixed(2);
-                var speedMbps = (speedKbps / 1024).toFixed(2);
-                ShowProgressMessage([
-                    "Your connection speed is:",
-                    speedBps + " bps",
-                    speedKbps + " kbps",
-                    speedMbps + " Mbps"
-                ]);
-            }
-        }
+        //     function showResults() {
+        //         var duration = (endTime - startTime) / 1000;
+        //         var bitsLoaded = downloadSize * 8;
+        //         var speedBps = (bitsLoaded / duration).toFixed(2);
+        //         var speedKbps = (speedBps / 1024).toFixed(2);
+        //         var speedMbps = (speedKbps / 1024).toFixed(2);
+        //         ShowProgressMessage([
+        //             "Your connection speed is:",
+        //             speedBps + " bps",
+        //             speedKbps + " kbps",
+        //             speedMbps + " Mbps"
+        //         ]);
+        //     }
+        // }
 
 
         $scope.myGoBack = function () {
@@ -373,13 +373,13 @@ angular.module('starter', ['ionic'])
 
             player.playlist([{
                     sources: [{
-                        src: 'videos/Ruby Falls TRIM720.mp4',
+                        src: 'videos/RubyFallsTRIM720.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
                 }, {
                     sources: [{
-                        src: 'videos/Ruby Falls TRIM720.mp4',
+                        src: 'videos/RubyFallsTRIM720.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
@@ -466,13 +466,13 @@ angular.module('starter', ['ionic'])
 
             player.playlist([{
                     sources: [{
-                        src: 'videos/Ruby Falls Board Demo FINAL 1920.mp4',
+                        src: 'videos/RubyFallsBoardDemoFINAL1920.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
                 }, {
                     sources: [{
-                        src: 'videos/Ruby Falls Board Demo FINAL 1920.mp4',
+                        src: 'videos/RubyFallsBoardDemoFINAL1920.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
@@ -556,13 +556,13 @@ angular.module('starter', ['ionic'])
 
             player.playlist([{
                     sources: [{
-                        src: 'videos/Ruby Falls Board Demo FINAL FULL SIZE.mp4',
+                        src: 'videos/RubyFallsBoardDemoFINALFULLSIZE.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
                 }, {
                     sources: [{
-                        src: 'videos/Ruby Falls Board Demo FINAL FULL SIZE.mp4',
+                        src: 'videos/RubyFallsBoardDemoFINALFULLSIZE.mp4',
                         type: 'video/mp4'
                     }],
                     poster: ''
