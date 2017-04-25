@@ -220,14 +220,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -295,14 +295,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -403,14 +403,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -493,14 +493,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -583,14 +583,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -673,14 +673,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
