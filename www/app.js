@@ -57,6 +57,11 @@ angular.module('starter', ['ionic'])
                 url: '/video6',
                 templateUrl: 'video6.html',
                 controller: 'appCtrlMannHummel'
+            })
+            .state('video7', {
+                url: '/video7',
+                templateUrl: 'video7.html',
+                controller: 'appCtrlMannHummel'
             });
         $urlRouterProvider.otherwise("/");
     })
@@ -200,16 +205,16 @@ angular.module('starter', ['ionic'])
             player.width(width), player.height(height);
 
 
-            player.playlist([{
-                    sources: [{
-                        src: $rootScope.videoSource,
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                },
+            // player.playlist([{
+            //         sources: [{
+            //             src: $rootScope.videoSource,
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     },
 
-            ]);
-            player.playlist.autoadvance(2.5);
+            // ]);
+            // player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
@@ -223,14 +228,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -298,14 +303,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -374,22 +379,22 @@ angular.module('starter', ['ionic'])
 
 
 
-            player.playlist([{
-                    sources: [{
-                        src: 'videos/Ruby Falls TRIMcomp.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }, {
-                    sources: [{
-                        src: 'videos/Ruby Falls TRIMcomp.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }
+            // player.playlist([{
+            //         sources: [{
+            //             src: 'videos/Ruby Falls TRIMcomp.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }, {
+            //         sources: [{
+            //             src: 'videos/Ruby Falls TRIMcomp.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }
 
-            ]);
-            player.playlist.autoadvance(2.5);
+            // ]);
+            // player.playlist.autoadvance(2.5);
 
 
             player.panorama({
@@ -406,14 +411,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -467,22 +472,22 @@ angular.module('starter', ['ionic'])
             player.width(width), player.height(height);
 
 
-            player.playlist([{
-                    sources: [{
-                        src: 'videos/VIP 360 VR Montage 03-30-2017 1920x1080.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }, {
-                    sources: [{
-                        src: 'videos/VIP 360 VR Montage 03-30-2017 1920x1080.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }
+            // player.playlist([{
+            //         sources: [{
+            //             src: 'videos/VIP 360 VR Montage 03-30-2017 1920x1080.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }, {
+            //         sources: [{
+            //             src: 'videos/VIP 360 VR Montage 03-30-2017 1920x1080.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }
 
-            ]);
-            player.playlist.autoadvance(2.5);
+            // ]);
+            // player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
@@ -496,14 +501,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -557,22 +562,22 @@ angular.module('starter', ['ionic'])
             player.width(width), player.height(height);
 
 
-            player.playlist([{
-                    sources: [{
-                        src: 'videos/CMC-360_0037_Stitch_XHC WITH Insets and Music.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }, {
-                    sources: [{
-                        src: 'videos/CMC-360_0037_Stitch_XHC WITH Insets and Music.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }
+            // player.playlist([{
+            //         sources: [{
+            //             src: 'videos/CMC-360_0037_Stitch_XHC WITH Insets and Music.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }, {
+            //         sources: [{
+            //             src: 'videos/CMC-360_0037_Stitch_XHC WITH Insets and Music.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }
 
-            ]);
-            player.playlist.autoadvance(2.5);
+            // ]);
+            // player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
@@ -586,14 +591,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -647,22 +652,22 @@ angular.module('starter', ['ionic'])
             player.width(width), player.height(height);
 
 
-            player.playlist([{
-                    sources: [{
-                        src: 'videos/Mann+Hummel_360_Testscomp.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }, {
-                    sources: [{
-                        src: 'videos/Mann+Hummel_360_Testscomp.mp4',
-                        type: 'video/mp4'
-                    }],
-                    poster: ''
-                }
+            // player.playlist([{
+            //         sources: [{
+            //             src: 'videos/Mann+Hummel_360_Testscomp.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }, {
+            //         sources: [{
+            //             src: 'videos/Mann+Hummel_360_Testscomp.mp4',
+            //             type: 'video/mp4'
+            //         }],
+            //         poster: ''
+            //     }
 
-            ]);
-            player.playlist.autoadvance(2.5);
+            // ]);
+            // player.playlist.autoadvance(2.5);
 
             player.panorama({
                 clickToToggle: (!isMobile()),
@@ -676,14 +681,14 @@ angular.module('starter', ['ionic'])
 
             console.log(player.cache_.src);
 
-            window.addEventListener("message", function (event) {
-                if (typeof event.data === "object") {
-                    if (event.data.type === "device-motion") {
-                        var canvas = player.getChild('Canvas');
-                        if (canvas) canvas.handleMobileOrientation(event.data.events);
-                    }
-                }
-            }, false);
+            // window.addEventListener("message", function (event) {
+            //     if (typeof event.data === "object") {
+            //         if (event.data.type === "device-motion") {
+            //             var canvas = player.getChild('Canvas');
+            //             if (canvas) canvas.handleMobileOrientation(event.data.events);
+            //         }
+            //     }
+            // }, false);
 
             function isIos() {
                 return /iPhone|iPad|iPod/i.test(navigator.userAgent);
