@@ -1,94 +1,93 @@
-    <ion-content id="homebackground" scroll="true">
-        <div class="row" style="margin-top: -10px;">
-          <div class="col col-80 col-offset-10">
+<ion-content id="homebackground" scroll="true">
+    <div class="row" style="margin-top: -10px;">
+        <div class="col col-80 col-offset-10">
             <div class="card top-banner">
-              <img src="img/bannerclear.png" style="max-height:none; width:auto; height:auto; max-width:75%; display:block; margin: 0 auto;">
-              <p>To see how we make our 360 videos and how to use this app, check out our "Behind the Scenes & Demo" video</p>
-            </div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="col col-50 col-offset-25">
-              <div class="card">
-                  <a class="" ng-href="#/video2"><img src="img/thumbnaildemo.png"></a>
-                  <p>Behind the Scenes & Demo (non-VR)</p>
-              </div>
-          </div>
-
-
-        </div>
-        <div class="row no-margintop">
-            <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video3"><img src="img/thumbnailmontagenoplay.png"></a>
-                    <p>VIP VR360 Montage (Local)</p>
-                </div>
-            </div>
-
-            <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video4"><img src="img/thumbnailcardmonroenoplay.png"></a>
-                    <p>Card Monroe 360 (Local)</p>
-                </div>
+                <img src="img/bannerclear.png" style="max-height:none; width:auto; height:auto; max-width:75%; display:block; margin: 0 auto;">
+                <p>To see how we make our 360 videos and how to use this app, check out our "Behind the Scenes & Demo" video</p>
             </div>
         </div>
-        <div class="row no-margintop">
-            <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video5"><img src="img/thumbnailrubyfalls.png"></a>
-                    <p>Ruby Falls (Local)</p>
-                </div>
-            </div>
 
-            <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video6"><img src="img/thumbnailmann.png"></a>
-                    <p>Mann+Hummel (Local)</p>
-                </div>
+    </div>
+    <div class="row">
+        <div class="col col-50 col-offset-25">
+            <div class="card">
+                <a class="" ng-href="#/video2"><img src="img/thumbnaildemo.png"></a>
+                <p>Behind the Scenes & Demo (non-VR)</p>
             </div>
         </div>
-        <div class="row no-margintop">
-            <div class="col col-50">
-                <div class="card">
-                    <a class="" ng-href="#/video7"><img src="img/thumbnailballet.png"></a>
-                    <p>Tennessee Ballet (Local)</p>
-                </div>
-            </div>
 
-            <!--<div class="col col-50">
+    </div>
+    <div class="row no-margintop">
+        <div class="col col-50">
+            <div class="card">
+                <a class="" ng-href="#/video3"><img src="img/thumbnailmontagenoplay.png"></a>
+                <p>VIP VR360 Montage (Local)</p>
+            </div>
+        </div>
+
+        <div class="col col-50">
+            <div class="card">
+                <a class="" ng-href="#/video4"><img src="img/thumbnailcardmonroenoplay.png"></a>
+                <p>Card Monroe 360 (Local)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row no-margintop">
+        <div class="col col-50">
+            <div class="card">
+                <a class="" ng-href="#/video5"><img src="img/thumbnailrubyfalls.png"></a>
+                <p>Ruby Falls (Local)</p>
+            </div>
+        </div>
+
+        <div class="col col-50">
+            <div class="card">
+                <a class="" ng-href="#/video6"><img src="img/thumbnailmann.png"></a>
+                <p>Mann+Hummel (Local)</p>
+            </div>
+        </div>
+    </div>
+    <div class="row no-margintop">
+        <div class="col col-50">
+            <div class="card">
+                <a class="" ng-href="#/video7"><img src="img/thumbnailballet.png"></a>
+                <p>Tennessee Ballet (Local)</p>
+            </div>
+        </div>
+
+        <!--<div class="col col-50">
                 <div class="card">
                     <a class="" ng-href="#/video6"><img src="img/thumbnailmann.png"></a>
                     <p>Mann+Hummel (Local)</p>
                 </div>
             </div>-->
+    </div>
+    <div class="row no-margintop">
+        <div class="col">
+            <div class="line-separator"></div>
+            <p style="color:white;text-align:center;margin-top:10px;margin-bottom:0;">Streaming Videos</p>
+            <p style="color:white;text-align:center;margin-bottom:0;">Choose Full Quality or Reduced Quality based on your Internet connection speed</p>
         </div>
-        <div class="row no-margintop">
-          <div class="col">
-          <div class="line-separator"></div>
-          <p style="color:white;text-align:center;margin-top:10px;margin-bottom:0;">Streaming Videos</p>
-          <p style="color:white;text-align:center;margin-bottom:0;">Choose Full Quality or Reduced Quality based on your Internet connection speed</p>
-          </div>
-        </div>
-        <div>
-          <div class="row" style="flex-wrap: wrap">
+    </div>
+    <div>
+        <div class="row" style="flex-wrap: wrap">
             <div ng-repeat="video in videos" class="col col-50">
-                <div  class="card" >
+                <div class="card">
                     <a ng-click="openVideo(video.source);">
-                      <img ng-src="{{video.thumbnail}}">
-                      <p>{{video.label}}</p>
+                        <img ng-src="{{video.thumbnail}}">
+                        <p>{{video.label}}</p>
                     </a>
                 </div>
-          </div>
+            </div>
         </div>
 
         <div class="row">
-          <div style="margin-top:30px;" class="col card">
-          <a class="button button-block" ng-click="checkConnection()">Check Connection
+            <div style="margin-top:30px;" class="col card">
+                <a class="button button-block" ng-click="checkConnection()">Check Connection
             </a>
-            <p id="progress">Click the button above to run the test</p>
+                <p id="progress">Click the button above to run the test</p>
             </div>
         </div>
 
 
-    </ion-content>
+</ion-content>
