@@ -146,6 +146,8 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
     [self.viewController.view sendSubviewToBack:fakeScrollView]; // Send it to the very back of the view heirarchy
     fakeScrollView.contentSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, UIScreen.mainScreen.bounds.size.height * 2.0f); // Make the scroll view longer than the screen itself
     fakeScrollView.contentOffset = CGPointMake(0.0f, UIScreen.mainScreen.bounds.size.height); // Scroll down so a tap will take scroll view back to the top
+
+    _statusBarVisible = ![UIApplication sharedApplication].isStatusBarHidden;
 }
 
 - (void)onReset {
@@ -379,6 +381,7 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 - (void) hide:(CDVInvokedUrlCommand*)command
 {
+    _statusBarVisible = NO;
     UIApplication* app = [UIApplication sharedApplication];
 
     if (!app.isStatusBarHidden)
@@ -411,6 +414,7 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
 - (void) show:(CDVInvokedUrlCommand*)command
 {
+    _statusBarVisible = YES;
     UIApplication* app = [UIApplication sharedApplication];
 
     if (app.isStatusBarHidden)
@@ -448,26 +452,13 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
 
     if (isIOS7) {
         CGRect bounds = [self.viewController.view.window bounds];
+        if (CGRectEqualToRect(bounds, CGRectZero)) {
+            bounds = [[UIScreen mainScreen] bounds];
+        }
         bounds = [self invertFrameIfNeeded:bounds];
 
-        if (UIInterfaceOrientationIsPortrait([[UIApplication sharedApplication] statusBarOrientation])) {
-            self.viewController.view.frame = bounds;
-        } else if (self.viewController.presentedViewController != nil) {
-            // https://issues.apache.org/jira/browse/CB-11018
-            BOOL isIOS8 = (IsAtLeastiOSVersion(@"8.0"));
-            BOOL isIOS9 = (IsAtLeastiOSVersion(@"9.0"));
-            if (isIOS8 && !isIOS9) {
-                // iOS 8
-                bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
-            } else {
-                // iOS7, iOS9+
-                if ([self.viewController.presentedViewController.presentationController isKindOfClass:[UIPopoverPresentationController class]] || UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-                    bounds = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
-                } else {
-                    bounds = CGRectMake(0, 0, bounds.size.height, bounds.size.width);
-                }
-            }
-        }
+        self.viewController.view.frame = bounds;
+
         self.webView.frame = bounds;
 
         CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
@@ -476,8 +467,10 @@ static const void *kStatusBarStyle = &kStatusBarStyle;
         CGFloat height = statusBarFrame.size.height;
 
         if (!self.statusBarOverlaysWebView) {
-            // CB-10158 If a full screen video is playing the status bar height will be 0, set it to 20
-            frame.origin.y = height > 0 ? height: 20;
+            if (_statusBarVisible) {
+                // CB-10158 If a full screen video is playing the status bar height will be 0, set it to 20 if _statusBarVisible
+                frame.origin.y = height > 0 ? height: 20;
+            }
         } else {
             // Even if overlay is used, we want to handle in-call/recording/hotspot larger status bar
             frame.origin.y = height >= 20 ? height - 20 : 0;

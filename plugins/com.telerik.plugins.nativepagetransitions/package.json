@@ -1,11 +1,75 @@
 {
-  "version": "0.6.5",
-  "name": "com.telerik.plugins.nativepagetransitions",
+  "_args": [
+    [
+      {
+        "raw": "com.telerik.plugins.nativepagetransitions@https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+        "scope": null,
+        "escapedName": "com.telerik.plugins.nativepagetransitions",
+        "name": "com.telerik.plugins.nativepagetransitions",
+        "rawSpec": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+        "spec": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:Telerik-Verified-Plugins/NativePageTransitions.git",
+          "sshUrl": "git+ssh://git@github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+          "httpsUrl": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+          "gitUrl": "git://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+          "shortcut": "github:Telerik-Verified-Plugins/NativePageTransitions",
+          "directUrl": "https://raw.githubusercontent.com/Telerik-Verified-Plugins/NativePageTransitions/master/package.json"
+        }
+      },
+      "/Users/ashtonl/Development/ionic-vr/node_modules"
+    ]
+  ],
+  "_from": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+  "_id": "com.telerik.plugins.nativepagetransitions@0.6.5",
+  "_inCache": true,
+  "_location": "/com.telerik.plugins.nativepagetransitions",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "com.telerik.plugins.nativepagetransitions@https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+    "scope": null,
+    "escapedName": "com.telerik.plugins.nativepagetransitions",
+    "name": "com.telerik.plugins.nativepagetransitions",
+    "rawSpec": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+    "spec": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:Telerik-Verified-Plugins/NativePageTransitions.git",
+      "sshUrl": "git+ssh://git@github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+      "httpsUrl": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+      "gitUrl": "git://github.com/Telerik-Verified-Plugins/NativePageTransitions.git",
+      "shortcut": "github:Telerik-Verified-Plugins/NativePageTransitions",
+      "directUrl": "https://raw.githubusercontent.com/Telerik-Verified-Plugins/NativePageTransitions/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/Telerik-Verified-Plugins/NativePageTransitions.git#b3e01b655dfea16adf0c479582155f26586632e1",
+  "_shasum": "662e857dc93da146767187d31a723bcefb7d21c4",
+  "_shrinkwrap": null,
+  "_spec": "com.telerik.plugins.nativepagetransitions@https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
+  "_where": "/Users/ashtonl/Development/ionic-vr/node_modules",
+  "author": {
+    "name": "Telerik / Eddy Verbruggen",
+    "email": "eddyverbruggen@gmail.com",
+    "url": "https://github.com/EddyVerbruggen"
+  },
   "cordova_name": "Native Page Transitions",
+  "dependencies": {},
   "description": "Slide out the current page to reveal the next one. By a native transitions.",
-  "license": "MIT",
-  "author": "Telerik / Eddy Verbruggen <eddyverbruggen@gmail.com> (https://github.com/EddyVerbruggen)",
-  "repo": "https://github.com/Telerik-Verified-Plugins/WKWebView.git",
+  "devDependencies": {},
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "gitHead": "b3e01b655dfea16adf0c479582155f26586632e1",
   "issue": "https://github.com/Telerik-Verified-Plugins/WKWebView/issues",
   "keywords": [
     "Native transitions",
@@ -21,16 +85,17 @@
     "cordova-wp8",
     "cordova-windows"
   ],
+  "license": "MIT",
+  "name": "com.telerik.plugins.nativepagetransitions",
+  "optionalDependencies": {},
   "platforms": [
     "ios",
     "android",
     "wp8",
     "windows"
   ],
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0.0"
-    }
-  ]
+  "readme": "## Native Page Transitions Cordova / PhoneGap Plugin\nby [Telerik](http://www.telerik.com)\n\n\n<table width=\"100%\">\n    <tr>\n        <td width=\"100\"><a href=\"http://plugins.telerik.com/plugin/native-page-transitions\"><img src=\"http://www.x-services.nl/github-images/telerik-verified-plugins-marketplace.png\" width=\"97px\" height=\"71px\" alt=\"Marketplace logo\"/></a></td>\n        <td>For a quick demo app and easy code samples, check out the plugin page at the Verified Plugins Marketplace: http://plugins.telerik.com/plugin/native-page-transitions</td>\n    </tr>\n</table>\n\n\nUsing the Cordova CLI?\n\n```\ncordova plugin add com.telerik.plugins.nativepagetransitions\n```\n\nUsing PGB?\n\n```xml\n<plugin name=\"com.telerik.plugins.nativepagetransitions\" source=\"npm\" />\n```\n\n[The MIT License (MIT)](http://www.opensource.org/licenses/mit-license.html)\n",
+  "readmeFilename": "README.md",
+  "repo": "https://github.com/Telerik-Verified-Plugins/WKWebView.git",
+  "version": "0.6.5"
 }
