@@ -1,56 +1,14 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "cordova-plugin-screen-orientation@^2.0.1",
-        "scope": null,
-        "escapedName": "cordova-plugin-screen-orientation",
-        "name": "cordova-plugin-screen-orientation",
-        "rawSpec": "^2.0.1",
-        "spec": ">=2.0.1 <3.0.0",
-        "type": "range"
-      },
-      "/Users/ashtonl/Development/ionic-vr/node_modules"
-    ]
-  ],
-  "_from": "cordova-plugin-screen-orientation@>=2.0.1 <3.0.0",
-  "_id": "cordova-plugin-screen-orientation@2.0.1",
-  "_inCache": true,
-  "_location": "/cordova-plugin-screen-orientation",
-  "_nodeVersion": "6.10.1",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/cordova-plugin-screen-orientation-2.0.1.tgz_1493685651107_0.03332542581483722"
+  "name": "cordova-plugin-screen-orientation",
+  "version": "2.0.1",
+  "description": "Adds Screen Orientation API lock and unlock functions to the global screen object in android, iOS, WP8, W8.1, and BB10.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/cordova-plugin-screen-orientation"
   },
-  "_npmUser": {
-    "name": "filmaj",
-    "email": "maj.fil@gmail.com"
-  },
-  "_npmVersion": "3.10.10",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "cordova-plugin-screen-orientation@^2.0.1",
-    "scope": null,
-    "escapedName": "cordova-plugin-screen-orientation",
-    "name": "cordova-plugin-screen-orientation",
-    "rawSpec": "^2.0.1",
-    "spec": ">=2.0.1 <3.0.0",
-    "type": "range"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-screen-orientation/-/cordova-plugin-screen-orientation-2.0.1.tgz",
-  "_shasum": "d608fd6cdd7e0b58bae3107768ac930af01ff437",
-  "_shrinkwrap": null,
-  "_spec": "cordova-plugin-screen-orientation@^2.0.1",
-  "_where": "/Users/ashtonl/Development/ionic-vr/node_modules",
-  "author": {
-    "name": "gbenvenuti"
-  },
-  "bugs": {
-    "url": "https://github.com/apache/cordova-plugin-screen-orientation/issues"
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint demo/www"
   },
   "cordova": {
     "id": "cordova-plugin-screen-orientation",
@@ -60,24 +18,6 @@
       "wp8"
     ]
   },
-  "dependencies": {},
-  "description": "Adds Screen Orientation API lock and unlock functions to the global screen object in android, iOS, WP8, W8.1, and BB10.",
-  "devDependencies": {
-    "jshint": "^2.9.4"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "d608fd6cdd7e0b58bae3107768ac930af01ff437",
-    "tarball": "https://registry.npmjs.org/cordova-plugin-screen-orientation/-/cordova-plugin-screen-orientation-2.0.1.tgz"
-  },
-  "engines": {
-    "cordovaDependencies": {
-      "3.0.0": {
-        "cordova": ">100"
-      }
-    }
-  },
-  "homepage": "https://github.com/apache/cordova-plugin-screen-orientation#readme",
   "keywords": [
     "cordova",
     "device",
@@ -87,47 +27,16 @@
     "portrait",
     "landscape"
   ],
+  "author": "gbenvenuti",
   "license": "Apache-2.0",
-  "maintainers": [
-    {
-      "name": "bowserj",
-      "email": "bowserj@apache.org"
-    },
-    {
-      "name": "filmaj",
-      "email": "maj.fil@gmail.com"
-    },
-    {
-      "name": "gbenvenuti",
-      "email": "grant.benvenuti@gmail.com"
-    },
-    {
-      "name": "purplecabbage",
-      "email": "purplecabbage@gmail.com"
-    },
-    {
-      "name": "shazron",
-      "email": "shazron@gmail.com"
-    },
-    {
-      "name": "stevegill",
-      "email": "stevengill97@gmail.com"
-    },
-    {
-      "name": "tony--",
-      "email": "tony.homer@intel.com"
+  "devDependencies": {
+    "jshint": "^2.9.4"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova": ">100"
+      }
     }
-  ],
-  "name": "cordova-plugin-screen-orientation",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/apache/cordova-plugin-screen-orientation.git"
-  },
-  "scripts": {
-    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint demo/www",
-    "test": "npm run jshint"
-  },
-  "version": "2.0.1"
+  }
 }
