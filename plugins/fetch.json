@@ -63,18 +63,18 @@
         "is_top_level": true,
         "variables": {}
     },
-    "ionic-plugin-keyboard": {
-        "source": {
-            "type": "registry",
-            "id": "ionic-plugin-keyboard@~2.2.1"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-wkwebview-engine": {
         "source": {
             "type": "registry",
             "id": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "ionic-plugin-keyboard": {
+        "source": {
+            "type": "registry",
+            "id": "ionic-plugin-keyboard@~2.2.1"
         },
         "is_top_level": true,
         "variables": {}

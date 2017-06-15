@@ -4,7 +4,6 @@
     "description": "vrApp: An Ionic project",
     "dependencies": {
         "com.telerik.plugins.nativepagetransitions": "https://github.com/Telerik-Verified-Plugins/NativePageTransitions",
-        "cordova": "^7.0.1",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-console": "~1.0.5",
         "cordova-plugin-device": "~1.1.4",
@@ -47,6 +46,7 @@
     "cordova": {
         "plugins": {
             "cordova-plugin-screen-orientation": {},
+            "cordova-plugin-wkwebview-engine": {},
             "com.telerik.plugins.nativepagetransitions": {},
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
@@ -54,8 +54,7 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-statusbar": {},
             "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {},
-            "cordova-plugin-wkwebview-engine": {}
+            "ionic-plugin-keyboard": {}
         },
         "platforms": [
             "ios"
