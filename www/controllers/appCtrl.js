@@ -51,12 +51,14 @@ app.controller('appCtrl', [
       var width = videoElement.offsetWidth;
       var height = videoElement.offsetHeight;
       player.width(width), player.height(height);
+      player.crossOrigin = "Anonymous";
 
       player.playlist([
         {
           sources: [
             {
               src: $rootScope.videoSource,
+              crossorigin: 'anonymous',
               type: 'video/mp4'
             }
           ],
@@ -72,8 +74,6 @@ app.controller('appCtrl', [
         initLon: -180,
         showNotice: false
       });
-
-      console.log(player.cache_.src);
 
       function isIos() {
         return /iPhone|iPad|iPod/i.test(navigator.userAgent);
