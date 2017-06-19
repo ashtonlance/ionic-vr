@@ -30,6 +30,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/video1',
         templateUrl: 'components/video1.html',
         controller: 'appCtrl'
+      })
+      .state('video2', {
+        url: '/video2',
+        templateUrl: 'components/video2.html',
+        controller: 'flatVideoCtrl'
       });
     $urlRouterProvider.otherwise('/');
   });
