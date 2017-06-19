@@ -1,22 +1,21 @@
 <ion-view>
   <ion-content id="homebackground" scroll="true">
-    <div class="row" style="margin-top: -10px;">
-      <div class="col col-80 col-offset-10">
-        <div class="card top-banner">
-          <img src="img/bannerclear.png" style="max-height:none; width:auto; height:auto; max-width:75%; display:block; margin: 0 auto;">
-          <p>To see how we make our 360 videos and how to use this app, check out our "Behind the Scenes & Demo" video</p>
-        </div>
-      </div>
-
-    </div>
     <div class="row">
       <div class="col">
+        <h1 style="color:white;text-align:center;margin-top:10px;margin-bottom:0;">Streaming Videos</h1>
+      </div>
+    </div>
+    <div class="row" style="flex-wrap: wrap; margin-top:10px;">
+      <div ng-repeat="video in videos" class="col col-50">
         <div class="card">
-          <a class="" ng-href="#/video2"><img src="img/thumbnaildemo.png"></a>
-          <p>Behind the Scenes & Demo (non-VR)</p>
+          <a ng-click="openVideo(video.source);">
+                        <img ng-src="{{video.thumbnail}}">
+                        <p>{{video.label}}</p>
+                    </a>
         </div>
       </div>
     </div>
+
   </ion-content>
 </ion-view>
 

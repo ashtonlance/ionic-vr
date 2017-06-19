@@ -3,7 +3,8 @@ var app = angular
   .config([
     '$ionicConfigProvider',
     function($ionicConfigProvider) {
-      $ionicConfigProvider.tabs.position('bottom'); // other values: top
+      $ionicConfigProvider.tabs.position('bottom');
+      $ionicConfigProvider.views.transition('none');
     }
   ])
   .run(function($ionicPlatform, $state) {

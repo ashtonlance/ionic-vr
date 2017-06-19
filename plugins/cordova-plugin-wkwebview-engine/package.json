@@ -50,7 +50,7 @@
     "/"
   ],
   "_resolved": "git+https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git#ff18817cac25f9be6c652756fb84f8be080fb3cd",
-  "_shasum": "700d782d27ee9f87df31d5cd1a64c3f0a63be767",
+  "_shasum": "f1c039324fb411e1d4112b314784617be02d0ed1",
   "_shrinkwrap": null,
   "_spec": "https://github.com/ionic-team/cordova-plugin-wkwebview-engine.git",
   "_where": "/Users/ashtonl/Development/ionic-vr/node_modules",
