@@ -6,20 +6,18 @@
                     <img src="img/bannerclear.png" style="max-height:none; width:auto; height:auto; max-width:75%; display:block; margin: 0 auto;">
                 </div>
             </div>
-
         </div>
         <div class="row" style="flex-wrap: wrap">
-            <div ng-repeat="video in localVideos" class="col col-50">
+            <div ng-repeat="video in localVideos" class="col col-90">
                 <div class="card">
                     <a ng-click="openVideo(video.source);">
+                        <span class="icon ion-play"></span>
                         <img ng-src="{{video.thumbnail}}">
                         <p>{{video.label}}</p>
                     </a>
                 </div>
             </div>
         </div>
-
-
     </ion-content>
 </ion-view>
 <ion-tabs class="tabs tabs-striped tabs-icon-top">

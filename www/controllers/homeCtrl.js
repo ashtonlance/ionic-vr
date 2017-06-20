@@ -7,27 +7,27 @@ app.controller('homeCtrl', [
   '$http',
   function($scope, $rootScope, $state, $ionicModal, $ionicHistory, $http) {
     $scope.localVideos = {
-      'Card Monroe': {
+      CardMonroe: {
         source: 'videos/CardMonroe.mp4',
         label: 'Card Monroe 360',
         thumbnail: 'img/thumbnailcardmonroenoplay.png'
       },
-      'VIP Montage': {
+      VIPMontage: {
         source: 'videos/VIPMontage.mp4',
         label: 'VIP Montage',
         thumbnail: 'img/thumbnailmontagenoplay.png'
       },
-      'Mann Hummel': {
+      MannHummel: {
         source: 'videos/MannHummel.mp4',
         label: 'Mann Hummel',
         thumbnail: 'img/thumbnailmann.png'
       },
-      'TennBallet': {
+      TennBallet: {
         source: 'videos/BalletTenn.mp4',
         label: 'Ballet Tennessee',
         thumbnail: 'img/thumbnailballet.png'
       },
-      'RubyFalls': {
+      RubyFalls: {
         source: 'videos/RubyFallsTRIM720.mp4',
         label: 'Ruby Falls',
         thumbnail: 'img/thumbnailrubyfalls.png'
