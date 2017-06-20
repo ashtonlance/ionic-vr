@@ -19,39 +19,24 @@ app.controller('appCtrl', [
       screen.orientation.lock('landscape');
     });
 
-    // screen.orientation.addEventListener('change', function() {
-      setTimeout(function() {
-        (function(window, videojs) {
-          var player = (window.player = videojs('videojs-panorama-player', {}));
-          console.log(player.panorama);
-          var videoElement = document.getElementById('videojs-panorama-player');
-          var width = videoElement.offsetWidth;
-          var height = videoElement.offsetHeight;
-          player.width(width), player.height(height);
-          player.crossOrigin = 'Anonymous';
+    setTimeout(function() {
+      (function(window, videojs) {
+        var player = (window.player = videojs('videojs-panorama-player', {}));
+        var videoElement = document.getElementById('videojs-panorama-player');
+        var width = videoElement.offsetWidth;
+        var height = videoElement.offsetHeight;
+        player.width(width), player.height(height);
+        player.src({ src: $rootScope.videoSource, type: 'video/mp4' });
+        player.crossOrigin = 'Anonymous';
 
-          player.playlist([
-            {
-              sources: [
-                {
-                  src: $rootScope.videoSource,
-                  crossorigin: 'anonymous',
-                  type: 'video/mp4'
-                }
-              ],
-              poster: ''
-            }
-          ]);
-
-          player.panorama({
-            autoMobileOrientation: true,
-            initFov: 100,
-            initLat: -5,
-            initLon: -180,
-            showNotice: false
-          });
-        })(window, window.videojs);
-      }, 500);
-    // });
+        player.panorama({
+          autoMobileOrientation: true,
+          initFov: 100,
+          initLat: -5,
+          initLon: -180,
+          showNotice: false
+        });
+      })(window, window.videojs);
+    }, 500);
   }
 ]);

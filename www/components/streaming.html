@@ -1,21 +1,23 @@
 <ion-view>
   <ion-content id="homebackground" scroll="true">
-    <div class="row">
-      <div class="col">
-        <h1 style="color:white;text-align:center;margin-top:10px;margin-bottom:0;">Streaming Videos</h1>
+    <div class="row" style="margin-top: -10px;">
+      <div class="col col-80 col-offset-10">
+        <div class="card top-banner">
+          <img src="img/bannerclear.png" style="max-height:none; width:auto; height:auto; max-width:75%; display:block; margin: 0 auto;">
+        </div>
       </div>
     </div>
     <div class="row" style="flex-wrap: wrap; margin-top:10px;">
-      <div ng-repeat="video in videos" class="col col-50">
+      <div ng-repeat="video in videos" class="col col-90">
         <div class="card">
           <a ng-click="openVideo(video.source);">
+            <span class="icon ion-play"></span>
                         <img ng-src="{{video.thumbnail}}">
                         <p>{{video.label}}</p>
                     </a>
         </div>
       </div>
     </div>
-
   </ion-content>
 </ion-view>
 

@@ -1,12 +1,11 @@
 <ion-view>
-    <ion-header-bar class="bar-dark">
-        <button class="button-clear" ng-click="myGoBack()" style="color: white;">
-          <i class="ion-home" style="color: white;"></i> Home
+    <ion-header-bar class="bar-clear">
+        <button class="button-clear" ng-click="myGoBack()">
+          <span class="icon ion-chevron-left"></span>
         </button>
-        <h1 animation="slide-left-right" class="title"></h1>
     </ion-header-bar>
 
-    <ion-content scroll="false" padding="false">
+    <ion-content scroll="false" padding="false" class="no-header" style="top: 0;">
         <video preload id="videojs-panorama-player" class="video-js vjs-sublime-skin vjs-playing" crossorigin="anonymous" controls loop>
           </video>
     </ion-content>
