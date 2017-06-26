@@ -9,6 +9,7 @@ app.controller('appCtrl', [
       var oldPlayer = document.getElementById('videojs-panorama-player');
       videojs(oldPlayer).dispose();
       window.history.back();
+      $ionicHistory.clearCache();
     };
 
     $scope.$on('$ionicView.beforeLeave', function() {
